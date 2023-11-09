@@ -5,44 +5,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script language="javascript">
-        function uzerimde(){
-            document.getElementById("metin2").innerHTML="Fare üzerimde";
+        function onMouseOver(){
+            document.getElementById("text2").innerHTML="Mouse over";
         }
-        function disarida(){
-            document.getElementById("metin2").innerHTML="Fare dışarıda";
+        function onMouseOut(){
+            document.getElementById("text2").innerHTML="Mouse out";
         }
-        function tiklandi(){
-            document.getElementById("metin1").innerHTML="Tıklandı";
+        function onClick(){
+            document.getElementById("text1").innerHTML="Clicked";
         }
-        function basildi(){
-            document.getElementById("metin3").innerHTML="Fareye basıldı";
+        function onMouseDown(){
+            document.getElementById("text3").innerHTML="Mouse button pressed";
         }
-        function birakildi(){
-            document.getElementById("metin3").innerHTML="Fare bırakıldı";
+        function onMouseUp(){
+            document.getElementById("text3").innerHTML="Mouse button released";
         }
     </script>
 </head>
 <body>
     <table width="100%" border="1">
         <tr>
-            <td>Olayın Adı</td>
-            <td>Tetikleyici</td>
-            <td>Etkilenecek Öğeler</td>
+            <td>Event Name</td>
+            <td>Trigger</td>
+            <td>Affected Elements</td>
         </tr>
         <tr>
             <td>onclick</td>
-            <td><button id="b1" onclick="tiklandi()">Tıkla</button></td>
-            <td><p id="metin1">&nbsp;</p></td>
+            <td><button id="b1" onclick="onClick()">Click</button></td>
+            <td><p id="text1">&nbsp;</p></td>
         </tr>
         <tr>
-            <td>onMouseOver - OnMouseOut</td>
-            <td><button id="b2" onmouseover="uzerimde()" onmouseout="disarida()">İmleç Üzerinde</button></td>
-            <td><p id="metin2">&nbsp;</p></td>
+            <td>onMouseOver - onMouseOut</td>
+            <td><button id="b2" onmouseover="onMouseOver()" onmouseout="onMouseOut()">Mouse Over</button></td>
+            <td><p id="text2">&nbsp;</p></td>
         </tr>
         <tr>
-            <td>onMouseDown</td>
-            <td><button id="b3" onmousedown="basildi()" onmouseup="birakildi()">Fare Tuşuna Basılı</button></td>
-            <td><p id="metin3">&nbsp;</p></td>
+            <td>onMouseDown - onMouseUp</td>
+            <td><button id="b3" onmousedown="onMouseDown()" onmouseup="onMouseUp()">Mouse Button Pressed</button></td>
+            <td><p id="text3">&nbsp;</p></td>
         </tr>
     </table>
 </body>

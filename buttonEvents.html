@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+input[type="button"]{
+width: 200px;
+height: 200px;
+border:none;
+font-size:3em;
+color:#940710;
+}
+#sonuc{
+
+}
+#azalt{
+background:#e71717;
+}
+#artir{
+background:#1e6118;
+}
+#sonuc{
+background:#02222a;
+}
+
+</style>
+<title>butonOlayları</title>
+</head>
+
+<body>
+
+<input type=button id="azalt" onclick="azalt()" value="-">
+<input type=button id="sonuc" value="0">
+<input type=button id="arttir" onclick="arttir()" value="+">
+
+
+<script>
+function arttir(){
+
+var sonuc=document.getElementById("sonuc");
+sonuc.value=Number(sonuc.value)+1;
+}
+
+function azalt(){
+var sonuc=document.getElementById("sonuc");
+sonuc.value=Number(sonuc.value)-1;
+}
+</script>
+
+</body>
+</html>

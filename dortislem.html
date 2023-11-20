@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>dortislem</title> 
+<meta charset="utf-8">
+</head>
+<body>
+ <h1>JavaScript Dört İşlem</h1>
+ <form name="toplam">
+   <label> 1. sayı:</label>
+   <input type="text" id="sayi1"><br><br>
+   <label> 2. sayı:</label>
+   <input type="text" id="sayi2"><br><br>
+   <input type="radio" name="islem" value="topla" id="topla">Topla
+   <input type="radio" name="islem" value="çıkar" id="cikar">Cıkar
+   <input type="radio" name="islem" value="çarp" id="carp">Carp
+   <input type="radio" name="islem" value="böl" id="bol">Böl<br>
+   <input type="button" id="btnHesap" value="HESAPLA">
+   </form>
+   <br>
+   <div id="kutuToplam"></div>
+   
+   <script>
+   
+    var btn=document.getElementById("btnHesap");
+	btn.onclick=function() {
+	var s1=Number(document.getElementById("sayi1").value);
+	var s2=Number(document.getElementById("sayi2").value);
+	var sonuc;
+	
+	if(document.getElementById("topla").checked)
+	{
+
+	 sonuc=s1+s2;
+	 
+	}
+	else if(document.getElementById("cikar").checked)
+	{
+	   sonuc=s1-s2;
+	}
+	else if(document.getElementById("carp").checked)
+	{
+	   sonuc=s1*s2;
+	
+	}
+	else if(document.getElementById("bol").checked)
+	{
+	  sonuc=s1/s2;
+	}
+	else
+	{
+       sonuc="seçim yapın..";
+	}
+	document.getElementById("kutuToplam").innerHTML="sonuç :"+sonuc;
+	}
+   
+  
+   </script>
+   
+   
+</body>
+</html>

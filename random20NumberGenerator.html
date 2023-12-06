@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rastgele 20 Sayı:</title>
+</head>
+<body>
+
+<script>
+   
+    var sayilar = new Array(20);    //20 elemanlı bir sayı dizisi oluşturuldu
+
+    for (var i = 0; i < sayilar.length; i++) {
+        
+        sayilar[i] = Math.floor(Math.random() * 100); // 0 ile 100 arasında rastgele sayılari diziye aktar
+    }
+
+    
+    sayilar.sort(function(a, b) {            // Diziyi küçükten büyüğe sıralar.Kullanılan algoritma Array.sort() metodu
+        return a - b;
+    });
+
+
+    document.write("Rastgele seçilen 20 sayı(küçükten büyüğe sıralı)");       // Dizi ekrana yazdırılır.
+    
+    for (var i = 0; i < sayilar.length; i++) {
+        document.write("<li>" +sayilar[i]+"</li>" );
+    }
+   
+</script>
+
+</body>
+</html>
